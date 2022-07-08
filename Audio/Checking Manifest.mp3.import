@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Checking Manifest.mp3-6a78fda91cc3b1a7f638b0e8aa2b8ce3.mp3str"
+
+[deps]
+
+source_file="res://Audio/Checking Manifest.mp3"
+dest_files=[ "res://.import/Checking Manifest.mp3-6a78fda91cc3b1a7f638b0e8aa2b8ce3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
