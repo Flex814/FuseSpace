@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/The1BitSpacePack_v1.0_color_transparent.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Squid1.gd" type="Script" id=2]
+
+[node name="Squid1" type="Area2D"]
+scale = Vector2( 1.0118, 0.990497 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 17
+vframes = 8
+frame = 10
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -2.96501, 5.04797, -2.96501, 5.04797, -1.97668, 5.04797, -0.988338, 2.01919, 0.988338, 2.01919, 1.97668, 5.04797, 2.96501, 5.04797, 2.96501, 3.02878, 1.97668, 1.00959, 2.96501, 0, 2.96501, -2.01919, 0.988338, -4.03838, -0.988338, -4.03838, -2.96501, -2.01919, -2.96501, 0, -1.97668, 1.00959, -2.96501, 3.02878 )
