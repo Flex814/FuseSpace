@@ -8,7 +8,12 @@ export(int) var ARMOR = 3
 func _process(delta):
 	position.y += SPEED * delta
 
+func _on_Squid1_body_entered(body):
+	body.queue_free()
+	ARMOR -= 1
+	if ARMOR <= 0:
+		queue_free()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Ship.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Squid1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SquidSpawner.tscn" type="PackedScene" id=3]
 
 [node name="Level1" type="Node"]
 
@@ -15,9 +16,12 @@ __meta__ = {
 }
 
 [node name="Ship" parent="." instance=ExtResource( 1 )]
-position = Vector2( 69, 227 )
+position = Vector2( 51, 151 )
 
 [node name="Squid1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 60, 51 )
 rotation = 3.14159
 scale = Vector2( 1, 1 )
+
+[node name="SquidSpawner" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1, 0 )

@@ -18,3 +18,10 @@ frame = 10
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -2.96501, 5.04797, -2.96501, 5.04797, -1.97668, 5.04797, -0.988338, 2.01919, 0.988338, 2.01919, 1.97668, 5.04797, 2.96501, 5.04797, 2.96501, 3.02878, 1.97668, 1.00959, 2.96501, 0, 2.96501, -2.01919, 0.988338, -4.03838, -0.988338, -4.03838, -2.96501, -2.01919, -2.96501, 0, -1.97668, 1.00959, -2.96501, 3.02878 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -2.38419e-07, 0.504797 )
+scale = Vector2( 0.296501, 0.454317 )
+
+[connection signal="body_entered" from="." to="." method="_on_Squid1_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

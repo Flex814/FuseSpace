@@ -13,3 +13,5 @@ vframes = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -6, 6, -2, 6, -1, 8, 1, 8, 2, 6, 6, 6, 6, -1, 5, -1, 4, 0, 3, -2, 2, -6, 1, -8, -1, -8, -2, -6, -3, -2, -4, 0, -5, -1, -6, -1 )
+
+[connection signal="area_entered" from="." to="." method="_on_Ship_area_entered"]
