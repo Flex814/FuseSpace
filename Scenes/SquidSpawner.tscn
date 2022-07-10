@@ -41,6 +41,7 @@ position = Vector2( 152, 0 )
 position = Vector2( 168, 0 )
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

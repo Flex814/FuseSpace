@@ -1,8 +1,11 @@
 extends Area2D
 
+const Death = preload("res://Scenes/Death.tscn")
+
 export(int) var SPEED = 30
 export(int) var ARMOR = 3
- 
+
+signal score_up
 
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
@@ -12,8 +15,16 @@ func _on_Squid1_body_entered(body):
 	body.queue_free()
 	ARMOR -= 1
 	if ARMOR <= 0:
+		var main = get_tree().current_scene
+		if main.is_in_group("World"):
+			main.score += 10
 		queue_free()
-
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+func _exit_tree():
+	var main = get_tree().current_scene
+	var death = Death.instance()
+	main.add_child(death)
+	death.global_position = global_position
