@@ -5,6 +5,7 @@
 
 [node name="Squid1" type="Area2D"]
 scale = Vector2( 1.0118, 0.990497 )
+z_index = 1
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

@@ -1,16 +1,14 @@
 extends RigidBody2D
 
+const HitEffect = preload("res://Scenes/HitEffect.tscn")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var bulletSound = $BulletSound
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	bulletSound.play()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func create_hit_effect():
+	var main = get_tree().current_scene
+	var hitEffect = HitEffect.instance()
+	main.add_child(hitEffect)
+	hitEffect.global_position = global_position

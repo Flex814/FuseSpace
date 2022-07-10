@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/The1BitSpacePack_v1.0_color_transparent.png" type="Texture" id=1]
+[ext_resource path="res://Audio/Explosion2.wav" type="AudioStream" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Explode"
@@ -57,3 +58,8 @@ frame = 14
 autoplay = "Explode"
 anims/Explode = SubResource( 1 )
 anims/RESET = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+autoplay = true
