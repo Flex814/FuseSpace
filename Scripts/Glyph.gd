@@ -22,12 +22,11 @@ func _on_Glyph_body_entered(body):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
-	emit_signal("player_death")
 	
 func add_to_score():
 	var main = get_tree().current_scene
 	if main.is_in_group("World"):
-		main.score += 10
+		main.score += 15
 
 func create_explosion():
 	var main = get_tree().current_scene

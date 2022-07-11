@@ -26,7 +26,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 func add_to_score():
 	var main = get_tree().current_scene
 	if main.is_in_group("World"):
-		main.score += 10
+		main.score += 20
 
 func create_explosion():
 	var main = get_tree().current_scene
