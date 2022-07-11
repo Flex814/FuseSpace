@@ -36,3 +36,6 @@ func _exit_tree():
 func _on_Ship_area_entered(area):
 	area.queue_free()
 	queue_free()
+
+func _on_VisibilityNotifier2D_screen_exited():
+	emit_signal("player_death")

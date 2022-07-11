@@ -4,6 +4,8 @@
 [ext_resource path="res://Scripts/Ship.gd" type="Script" id=2]
 
 [node name="Ship" type="Area2D"]
+collision_layer = 3
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -14,4 +16,9 @@ vframes = 8
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -6, 6, -2, 6, -1, 8, 1, 8, 2, 6, 6, 6, 6, -1, 5, -1, 4, 0, 3, -2, 2, -6, 1, -8, -1, -8, -2, -6, -3, -2, -4, 0, -5, -1, -6, -1 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -4.76837e-07, 0 )
+scale = Vector2( 0.6, 0.8 )
+
 [connection signal="area_entered" from="." to="." method="_on_Ship_area_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
