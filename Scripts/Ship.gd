@@ -5,6 +5,8 @@ const ExplosionEffect = preload("res://Scenes/ExplosionEffect.tscn")
 
 export(int) var SPEED = 100
 
+signal player_death
+
 #Basic Controls
 func _process(delta):
 	if Input.is_action_pressed("ui_left"):
@@ -24,13 +26,13 @@ func fire_bullet():
 	main.add_child(bullet)
 	bullet.global_position = global_position
 
-
-func _on_Ship_area_entered(area):
-	area.queue_free()
-	queue_free()
-
 func _exit_tree():
 	var main = get_tree().current_scene
 	var explosion = ExplosionEffect.instance()
 	main.add_child(explosion)
 	explosion.global_position = global_position
+	emit_signal("player_death")
+
+func _on_Ship_area_entered(area):
+	area.queue_free()
+	queue_free()

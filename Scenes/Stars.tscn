@@ -12,7 +12,7 @@ initial_velocity_random = 0.8
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[node name="Particles2D" type="Particles2D"]
+[node name="Stars" type="Particles2D"]
 position = Vector2( 90, 0 )
 amount = 200
 lifetime = 15.0
